@@ -1,5 +1,5 @@
-import { generateMovieCards } from "./movieShow.js";
-import { handleSearch } from "./search.js";
+import { generateMovieCards } from "../feat_js/movieShow.js";
+import { handleSearch } from "../feat_js/search.js";
 
 generateMovieCards();
 
