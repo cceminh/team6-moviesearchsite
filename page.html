@@ -3,18 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/css.css" />
-    <script src="./modules/main.js"></script>
+    <link rel="stylesheet" href="css/css.css" />
+    <title>영화 검색 사이트</title>
+    <script type="module" src="./modules/main.js"></script>
   </head>
+
   <body>
-    <header id="head" class="header">최고의 영화</header>
-    <div class="searchbox">
-      <label>영화 검색: </label
-      ><input id="movieName" type="text" placeholder="무얼 찾으시나요?" />
-      <button id="searchButton">검색</button>
-      <button id="refreshButton">새로고침</button>
-    </div>
-    <section class="cardlist"></section>
+    <header class="header">
+      <h1>최고의 영화</h1>
+    </header>
+    <form class="search_form" id="search_form">
+      <label>영화 검색: </label>
+      <input
+        name="searchValue"
+        id="search_input"
+        type="text"
+        placeholder="무얼 찾으시나요?"
+      />
+      <button type="submit" id="search-btn">검색</button>
+    </form>
+    <section class="cardlist" id="card_list"></section>
   </body>
 </html>
