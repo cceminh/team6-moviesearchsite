@@ -49,3 +49,7 @@
   /* 일단 a 태그로 글자색 블루로 떠서 임시로 글자색 블랙으로 처리, 나중에 css로 처리 필요 */
   color: black;
 }
+
+#randomP {
+  display: none;
+}
