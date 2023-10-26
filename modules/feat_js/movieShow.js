@@ -7,32 +7,32 @@ export const generateMovieCards = async () => {
   cardList.innerHTML = movies
     .map(
       (movie) =>
-        `<div class="movie_card" id=${movie.id}>
+        `<a id="a_movie_card" href="./movie_detail_page/?${movie.id}.html"><div class="movie_card" id=${movie.id}>
               <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
               <h3 id="title" class="movie_title">${movie.title}</h3>
               <p id="overview">${movie.overview}</p>
               <p id="rating">평점:${movie.vote_average}</p>
-              </div>`
+              </div></a>`
     )
     .join("");
 
-  cardList.addEventListener("click", handleClickCard);
+  // cardList.addEventListener("click", handleClickCard);
 
-  // 이벤트 위임: 하위요소에서 발생한 이벤트를 상위요소에서 처리하도록 해줍니다.
-  function handleClickCard({ target }) {
-    // 카드 외 영역 클릭 시 무시
-    if (target === cardList) return;
+  // // 이벤트 위임: 하위요소에서 발생한 이벤트를 상위요소에서 처리하도록 해줍니다.
+  // function handleClickCard({ target }) {
+  //   // 카드 외 영역 클릭 시 무시
+  //   if (target === cardList) return;
 
-    if (target.matches(".movie-card")) {
-      goToMovieDetail();
-    } else {
-      // 카드의 자식 태그 (img, h3, p) 클릭 시 부모의= id로 접근
-      goToMovieDetail();
-    }
-  }
+  //   if (target.matches(".movie-card")) {
+  //     goToMovieDetail();
+  //   } else {
+  //     // 카드의 자식 태그 (img, h3, p) 클릭 시 부모의= id로 접근
+  //     goToMovieDetail();
+  //   }
+  // }
 };
 
-async function fetchMovieData() {
+export async function fetchMovieData() {
   const options = {
     method: "GET",
     headers: {
