@@ -1,19 +1,17 @@
-import {generateMovieCards} from "../feat_js/movieShow.js";
-import {handleSearch} from "../feat_js/search.js";
+import { generateMovieCards } from "../feat_js/movieShow.js";
+import { handleSearch } from "../feat_js/search.js";
 import { fetchMovieData } from "../feat_js/movieShow.js";
-
-
 
 // export function showClickedMovieDetail() {
 
 //   fetchMovieData();
 //   // const generateMovieCards = async() => {
-//   //   const movies = await fetchMovieData(); 
+//   //   const movies = await fetchMovieData();
 
-//   //   const cardList = document.querySelector("#card-list"); 
-//   //   cardList.innerHTML = movies 
+//   //   const cardList = document.querySelector("#card-list");
+//   //   cardList.innerHTML = movies
 //   //     .map(
-//   //       (movie) => 
+//   //       (movie) =>
 //   //       `<li class="movie-card" id=${movie.id}>
 //   //           <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="${movie.title}"/>
 //   //           <h3 class="movie-title">${movie.title}</h3>
@@ -26,4 +24,3 @@ import { fetchMovieData } from "../feat_js/movieShow.js";
 //   // };
 //   alert(`The movie detail you clicked is below. Id is ${event.target.id} and movie title is ${event.target.title}`);
 // }
-

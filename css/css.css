@@ -43,9 +43,12 @@
   border-radius: 25px;
 }
 
-
 #a_movie_card {
   text-decoration: none;
   /* 일단 a 태그로 글자색 블루로 떠서 임시로 글자색 블랙으로 처리, 나중에 css로 처리 필요 */
   color: black;
+}
+
+.search_results {
+  display: none;
 }
