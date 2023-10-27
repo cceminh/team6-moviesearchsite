@@ -1,5 +1,6 @@
 import { generateMovieCards } from "../feat_js/movieShow.js";
 import { handleSearch } from "../feat_js/search.js";
+import { randomPost } from "../feat_js/randomPost.js";
 
 generateMovieCards("now_playing");
 generateMovieCards("top_rated");
@@ -16,3 +17,5 @@ searchForm.addEventListener("submit", (event) => {
   event.preventDefault();
   handleSearch(searchInput.value);
 });
+
+
