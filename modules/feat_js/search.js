@@ -1,6 +1,5 @@
 export const handleSearch = async (searchKeyword) => {
   const movieCards = document.querySelectorAll(".search_card");
-  // const totalcards = document.querySelector(".search_list");
 
   movieCards.forEach((card) => {
     const title = card.querySelector(".search_title").textContent.toLowerCase();
