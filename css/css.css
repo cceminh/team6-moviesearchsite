@@ -66,3 +66,12 @@ h1 {
 #randomP {
   display: none;
 }
+
+.search_secion {
+  display: none;
+}
+
+.search_list {
+  display: flex;
+  flex-wrap: wrap;
+}

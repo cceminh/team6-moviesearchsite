@@ -1,7 +1,8 @@
+export const movie_arr = [];
 
 export const generateMovieCards = async (movie_list) => {
   const movies = await fetchMovieData(movie_list);
-
+  movie_arr.push(...movies);
   const cardList = document.querySelector("#" + movie_list + "_card");
   cardList.innerHTML = movies
     .map(
@@ -12,6 +13,21 @@ export const generateMovieCards = async (movie_list) => {
             <h3 id="title" class="movie_title">${movie.title}</h3>
          </div>
         </a>`
+    )
+    .join("");
+};
+
+export const searchResultCard = async (movie_list) => {
+  const movie = await fetchMovieData(movie_list);
+
+  const cardLists = document.querySelector("#card");
+  cardLists.innerHTML += movie
+    .map(
+      (moviee) =>
+        `<a id="a_movie_card" href="./movie_detail_page/?${moviee.id}.html"><div class="search_card" id=${moviee.id}>
+              <img src="https://image.tmdb.org/t/p/w500${moviee.poster_path}" alt="${movie.title}">
+              <h3 id="title" class="search_title">${moviee.title}</h3>
+              </div></a>`
     )
     .join("");
 };

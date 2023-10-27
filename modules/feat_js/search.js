@@ -1,14 +1,15 @@
-export const handleSearch = (searchKeyword) => {
-  const movieCards = document.querySelectorAll(".movie_card");
+export const handleSearch = async (searchKeyword) => {
+  const movieCards = document.querySelectorAll(".search_card");
 
   movieCards.forEach((card) => {
-    const title = card.querySelector(".movie_title").textContent.toLowerCase();
+    const title = card.querySelector(".search_title").textContent.toLowerCase();
     const searchedValue = searchKeyword.toLowerCase();
 
-    if (title.includes(searchedValue)) {
+    if (title.includes(searchedValue) && 0 < searchedValue.length) {
       card.style.display = "block";
     } else {
       card.style.display = "none";
+      console.log("오류");
     }
   });
 };
