@@ -10,4 +10,6 @@
 // import {fetchMovieDetailData} from "../feat_js/clicked_movie_show.js";
 import {generateMovieDetailCards} from "../feat_js/clicked_movie_show.js"
 
-generateMovieDetailCards();
+generateMovieDetailCards("now_playing");
+generateMovieDetailCards("top_rated");
+generateMovieDetailCards("popular");

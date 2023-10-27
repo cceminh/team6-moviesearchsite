@@ -7,8 +7,8 @@ import {generateMovieCards} from "../feat_js/movieShow.js";
 // -------------- 기존 API 다시 불러오기 ---------------- //
 
 
-  export const generateMovieDetailCards = async () => {
-    const movie_details = await fetchMovieData();
+  export const generateMovieDetailCards = async (movie_list) => {
+    const movie_details = await fetchMovieData(movie_list);
     const detailCardList = document.querySelector("#detail_card_list");
     const url = window.location.href;
     // console.log(url);

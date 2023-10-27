@@ -1,4 +1,3 @@
-// import { goToMovieDetail } from "../feat_js/goto_movie_detail.js";
 
 export const generateMovieCards = async (movie_list) => {
   const movies = await fetchMovieData(movie_list);
@@ -15,21 +14,6 @@ export const generateMovieCards = async (movie_list) => {
         </a>`
     )
     .join("");
-
-  // cardList.addEventListener("click", handleClickCard);
-
-  // // 이벤트 위임: 하위요소에서 발생한 이벤트를 상위요소에서 처리하도록 해줍니다.
-  // function handleClickCard({ target }) {
-  //   // 카드 외 영역 클릭 시 무시
-  //   if (target === cardList) return;
-
-  //   if (target.matches(".movie-card")) {
-  //     goToMovieDetail();
-  //   } else {
-  //     // 카드의 자식 태그 (img, h3, p) 클릭 시 부모의= id로 접근
-  //     goToMovieDetail();
-  //   }
-  // }
 };
 
 export async function fetchMovieData(movie_list) {
