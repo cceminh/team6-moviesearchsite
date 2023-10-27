@@ -16,5 +16,4 @@ searchForm.addEventListener("submit", (event) => {
   handleSearch(searchInput.value);
 });
 
-//랜덤포스트
-randomPost ();
+

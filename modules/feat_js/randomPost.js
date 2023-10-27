@@ -11,8 +11,8 @@ const render =(movie => {
 // id="a_movie_card" href="./movie_detail_page/?${movie.id}.html"
             //   <p id="overview">${movie.overview}</p>
             //   <p id="rating">평점:${movie.vote_average}</p>
- export async function randomPost() {
-        const movieList = await fetchMovieData();
+ export async function randomPost(movie_list) {
+        const movieList = await fetchMovieData(movie_list);
         let random = movieList[Math.floor(Math.random()*20)];
         document.querySelector('.randomP').innerHTML = render(random);
     } 
