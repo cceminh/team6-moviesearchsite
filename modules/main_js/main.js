@@ -1,7 +1,9 @@
 import { generateMovieCards } from "../feat_js/movieShow.js";
 import { handleSearch } from "../feat_js/search.js";
 
-generateMovieCards();
+generateMovieCards("now_playing");
+generateMovieCards("top_rated");
+generateMovieCards("popular");
 
 /** 검색기능 시작 */
 
