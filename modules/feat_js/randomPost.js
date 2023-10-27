@@ -20,7 +20,10 @@ const render =(movie => {
 export const randomBtn = document.getElementById('randomBtn');
 
  function display() {
-    randomPost();
+    randomPost("now_playing");
+    randomPost("top_rated");
+    randomPost("popular");
+
   document.querySelector('.randomP').style.display === "none"
     ? document.querySelector('.randomP').style.display = "block"
     : document.querySelector('.randomP').style.display = "none";

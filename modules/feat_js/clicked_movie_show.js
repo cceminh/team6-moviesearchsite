@@ -1,29 +1,40 @@
+// TMDB Movies Detail API 
+// https://developer.themoviedb.org/reference/movie-details
+import {fetchMovieData} from "../feat_js/movieShow.js";
 import {generateMovieCards} from "../feat_js/movieShow.js";
-import {handleSearch} from "../feat_js/search.js";
-import { fetchMovieData } from "../feat_js/movieShow.js";
 
 
+// -------------- 기존 API 다시 불러오기 ---------------- //
 
-// export function showClickedMovieDetail() {
 
-//   fetchMovieData();
-//   // const generateMovieCards = async() => {
-//   //   const movies = await fetchMovieData(); 
+  export const generateMovieDetailCards = async () => {
+    const movie_details = await fetchMovieData();
+    const detailCardList = document.querySelector("#detail_card_list");
+    const url = window.location.href;
+    // console.log(url);
+    const searchParams = new URL(url).searchParams;
+    const idOnAddress = searchParams.get('id'); 
+    console.log("결과: " + idOnAddress); //  ${movie.id} 에 해당하는 number
+    
+    const foundClickedMovie = movie_details.find(({id}) => id == idOnAddress); // 객체구조분해 할당
+    console.log(foundClickedMovie); // 클릭된 영화묶음 객체
+    
+    const clickedMovieId = foundClickedMovie.id;
+    const clikedPoster = foundClickedMovie.poster_path;
+    const clickedTitle = foundClickedMovie.title;
+    const clickedOverview = foundClickedMovie.overview;
+    const clickedReview = foundClickedMovie.vote_average;
 
-//   //   const cardList = document.querySelector("#card-list"); 
-//   //   cardList.innerHTML = movies 
-//   //     .map(
-//   //       (movie) => 
-//   //       `<li class="movie-card" id=${movie.id}>
-//   //           <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="${movie.title}"/>
-//   //           <h3 class="movie-title">${movie.title}</h3>
-//   //           <p>${movie.overview}</p>
-//   //           <p>${movie.vote_average}</p>
-//   //       </li>`
-//   //     )
-//   //     .join("");
+    // console.log(clickedMovieId);
 
-//   // };
-//   alert(`The movie detail you clicked is below. Id is ${event.target.id} and movie title is ${event.target.title}`);
-// }
+    detailCardList.innerHTML = 
+    `<div id=${clickedMovieId}>
+              <img src="https://image.tmdb.org/t/p/w500${clikedPoster}"/>
+              <h3>${clickedTitle}</h3>
+              <p>${clickedOverview}</p>
+              <p>${clickedReview}</p>
+            </div>`
+    ;
+  };
 
+  
