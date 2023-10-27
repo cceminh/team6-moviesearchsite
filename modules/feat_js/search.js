@@ -1,16 +1,16 @@
-export const handleSearch = (searchKeyword) => {
+export const handleSearch = async (searchKeyword) => {
   const movieCards = document.querySelectorAll(".search_card");
+  // const totalcards = document.querySelector(".search_list");
 
   movieCards.forEach((card) => {
     const title = card.querySelector(".search_title").textContent.toLowerCase();
     const searchedValue = searchKeyword.toLowerCase();
 
-    if (title.includes(searchedValue)) {
+    if (title.includes(searchedValue) && 0 < searchedValue.length) {
       card.style.display = "block";
     } else {
       card.style.display = "none";
+      console.log("오류");
     }
   });
 };
-
-// import { movie_section } from "..main_js/main_js";

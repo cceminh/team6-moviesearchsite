@@ -23,7 +23,7 @@
 }
 
 .cardlist {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
 }
@@ -49,6 +49,11 @@
   color: black;
 }
 
-.search_results {
+.search_secion {
   display: none;
+}
+
+.search_list {
+  display: flex;
+  flex-wrap: wrap;
 }
