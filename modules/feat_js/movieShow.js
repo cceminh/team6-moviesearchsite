@@ -1,18 +1,18 @@
-// import { goToMovieDetail } from "../feat_js/goto_movie_detail.js";
-//메인//
+export const movie_arr = [];
+
 export const generateMovieCards = async (movie_list) => {
   const movies = await fetchMovieData(movie_list);
-
+  movie_arr.push(...movies);
   const cardList = document.querySelector("#" + movie_list + "_card");
   cardList.innerHTML = movies
     .map(
       (movie) =>
-        `<a id="a_movie_card" href="./movie_detail_page/?${movie.id}.html"><div class="movie_card" id=${movie.id}>
-              <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
-              <h3 id="title" class="movie_title">${movie.title}</h3>
-              <p id="overview">${movie.overview}</p>
-              <p id="rating">평점:${movie.vote_average}</p>
-              </div></a>`
+        `<a id="a_movie_card" href="./movie_detail_page.html?id=${movie.id}">
+          <div class="movie_card" id=${movie.id}>
+            <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
+            <h3 id="title" class="movie_title">${movie.title}</h3>
+         </div>
+        </a>`
     )
     .join("");
 };

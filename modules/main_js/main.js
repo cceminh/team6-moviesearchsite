@@ -1,10 +1,11 @@
 import { generateMovieCards } from "../feat_js/movieShow.js";
-import { searchResultCard } from "../feat_js/movieShow.js";
 import { handleSearch } from "../feat_js/search.js";
+import { randomPost } from "../feat_js/randomPost.js";
+import { searchResultCard } from "../feat_js/movieShow.js";
 
+generateMovieCards("upcoming");
 generateMovieCards("top_rated");
 generateMovieCards("popular");
-generateMovieCards("upcoming");
 
 searchResultCard("top_rated");
 searchResultCard("popular");
