@@ -13,7 +13,7 @@ searchResultCard("upcoming");
 
 /** 검색기능 시작 */
 let movie_section = document.getElementById("movie_section");
-let search_results = document.getElementById("search_secion");
+let search_results = document.getElementById("search_section");
 
 const searchInput = document.querySelector("#search_input");
 searchInput.focus();
