@@ -22,7 +22,7 @@
   margin: 0px 10px 0px 10px;
 }
 
-.cardlist{
+.cardlist {
   display: flex;
   justify-content: row;
   gap: 15px;
@@ -30,7 +30,8 @@
   justify-items: center;
 }
 
-.movie_card, .search_card{
+.movie_card,
+.search_card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -43,7 +44,8 @@
   margin-bottom: 50px;
 }
 
-.movie_card > img, .search_card > img{
+.movie_card > img,
+.search_card > img {
   width: 230px;
   border-radius: 20px;
 }
@@ -52,7 +54,8 @@ h1 {
   margin: 70px, 0px;
 }
 
-.movie_title, .search_title {
+.movie_title,
+.search_title {
   font-weight: bold;
   font-size: 20px;
 }
@@ -65,6 +68,7 @@ h1 {
 
 #randomP {
   display: none;
+  width: fit-content;
 }
 
 .search_section {
