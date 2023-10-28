@@ -14,7 +14,7 @@ export const generateMovieDetailCards = async (movie_list) => {
   const idOnAddress = searchParams.get("id");
   console.log("결과: " + idOnAddress); //  ${movie.id} 에 해당하는 number
 
-  const foundClickedMovie = movie_details.find(({ id }) => id == idOnAddress); // 객체구조분해 할당
+  const foundClickedMovie = movie_details.find(({ id }) => id == idOnAddress); 
   console.log(foundClickedMovie); // 클릭된 영화묶음 객체
 
   const clickedMovieId = foundClickedMovie.id;
@@ -22,13 +22,15 @@ export const generateMovieDetailCards = async (movie_list) => {
   const clickedTitle = foundClickedMovie.title;
   const clickedOverview = foundClickedMovie.overview;
   const clickedReview = foundClickedMovie.vote_average;
+  const clickedReleaseDate = foundClickedMovie.release_date;
 
   // console.log(clickedMovieId);
 
   detailCardList.innerHTML = `<div id=${clickedMovieId}>
               <img src="https://image.tmdb.org/t/p/w500${clikedPoster}"/>
               <h3>${clickedTitle}</h3>
-              <p>${clickedOverview}</p>
-              <p>${clickedReview}</p>
+              <p>Overview : ${clickedOverview}</p>
+              <p>Reaslse Date : ${clickedReleaseDate}</p>
+              <p>Rating : ${clickedReview}</p>
             </div>`;
 };
