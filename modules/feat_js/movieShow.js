@@ -23,10 +23,10 @@ export const searchResultCard = async (movie_list) => {
   const cardLists = document.querySelector("#card");
   cardLists.innerHTML += movie
     .map(
-      (moviee) =>
-        `<a id="a_movie_card" href="./movie_detail_page/?${moviee.id}.html"><div class="search_card" id=${moviee.id}>
-              <img src="https://image.tmdb.org/t/p/w500${moviee.poster_path}" alt="${movie.title}">
-              <h3 id="title" class="search_title">${moviee.title}</h3>
+      (movie) =>
+        `<a id="a_movie_card" href="./movie_detail_page/?${movie.id}.html"><div class="search_card" id=${movie.id}>
+              <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
+              <h3 id="title" class="search_title">${movie.title}</h3>
               </div></a>`
     )
     .join("");
