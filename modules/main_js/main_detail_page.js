@@ -9,7 +9,15 @@
 
 // import {fetchMovieDetailData} from "../feat_js/clicked_movie_show.js";
 import { generateMovieDetailCards } from "../feat_js/clicked_movie_show.js";
+import { goHomeBtn } from "../feat_js/goHome.js";
 
-generateMovieDetailCards("now_playing");
+
+generateMovieDetailCards("upcoming");
 generateMovieDetailCards("top_rated");
 generateMovieDetailCards("popular");
+
+
+// 홈으로 가기 //
+goHomeBtn.addEventListener('click', (event) => {
+  window.location.href = 'page.html';
+});

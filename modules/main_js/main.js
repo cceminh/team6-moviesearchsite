@@ -2,6 +2,7 @@ import { generateMovieCards } from "../feat_js/movieShow.js";
 import { handleSearch } from "../feat_js/search.js";
 import { randomPost } from "../feat_js/randomPost.js";
 import { searchResultCard } from "../feat_js/movieShow.js";
+import { goHomeBtn } from "../feat_js/goHome.js";
 
 generateMovieCards("upcoming");
 generateMovieCards("top_rated");
@@ -28,4 +29,10 @@ searchForm.addEventListener("submit", (event) => {
   }, 100);
 
   handleSearch(searchInput.value);
+});
+
+
+// 홈으로 가기 //
+goHomeBtn.addEventListener('click', (event) => {
+  window.location.href = 'page.html';
 });
