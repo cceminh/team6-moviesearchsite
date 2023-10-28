@@ -2,7 +2,7 @@
 // https://developer.themoviedb.org/reference/movie-details
 // import { fetchMovieData } from "../feat_js/movieShow.js";
 // import { generateMovieCards } from "../feat_js/movieShow.js";
-import { combinedArray } from "../feat_js/movieShow.js"; // 3개의 api를 담은 변수.
+import { combinedArray } from "../feat_js/api.js"; // 3개의 api를 담은 변수.
 
 // api 3개 담은 배열을 만들어서 가져왔어요.
 // 그래서 async, fetch가 필요없어져서 지워버렸습니다.
