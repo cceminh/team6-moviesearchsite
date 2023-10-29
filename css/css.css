@@ -95,7 +95,7 @@ h1 {
   justify-content: center;
 }
 
-#randomP {
+.randomP {
   display: none;
   width: 13rem;
   height: 2rem;
