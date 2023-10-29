@@ -7,9 +7,7 @@ generateMovieCards("upcoming");
 generateMovieCards("top_rated");
 generateMovieCards("popular");
 
-searchResultCard("top_rated");
-searchResultCard("popular");
-searchResultCard("upcoming");
+searchResultCard();
 
 /** 검색기능 시작 */
 let movie_section = document.getElementById("movie_section");
