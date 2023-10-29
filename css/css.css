@@ -1,8 +1,11 @@
+body {
+  background-color: black;
+}
 .header {
   background-color: black;
   height: 150px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -11,7 +14,6 @@
   margin: 0 2rem 0 2rem;
   cursor: pointer;
 }
-
 
 .search_form {
   height: 100px;
@@ -41,7 +43,6 @@
   border-radius: 3px;
 }
 
-
 .cardlist {
   display: flex;
   justify-content: row;
@@ -57,11 +58,11 @@
   justify-content: space-between;
   height: 430px;
   gap: 25px;
-  border: 1px solid #ebeaec;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
   border-radius: 20px;
   padding: 25px;
   margin-bottom: 50px;
+  color: white;
 }
 
 .movie_card > img,
@@ -93,21 +94,40 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-left: 100px;
 }
 
 #randomP {
   display: none;
-  width: 13rem;
-  height: 2rem;
-  margin-top: 1rem;
-  border-radius: 3px;
+  position: fixed;
+  right: 0%;
+  top: 0%;
+  left: 0%;
+  bottom: 0%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(45 45 41 / 52%);
 }
 
 #randomBtn {
-  width: 15rem;
-  height: 3rem;
+  height: 4rem;
+  position: fixed;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  position: fixed;
 }
-
+.random_text {
+  font-weight: 600;
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: white;
+}
+.random_detail {
+  display: grid;
+  justify-items: center;
+}
 .movie_title2 {
   color: white;
   font-weight: 700;
@@ -115,7 +135,6 @@ h1 {
 }
 
 #a_movie_card2 {
-  width: 5rem;
   text-decoration: none;
 }
 
@@ -125,9 +144,30 @@ h1 {
 
 .search_list {
   display: flex;
-  /* flex-wrap: wrap; */
   justify-content: row;
   gap: 15px;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
+}
+
+.movie_img {
+  width: 400px;
+  border-radius: 40px;
+  box-shadow: 1px 0px 16px 20px rgba(0, 0, 0, 0.3);
+}
+
+.movie_card3 {
+  display: grid;
+  height: 630px;
+  justify-items: center;
+}
+.modal_close {
+  cursor: pointer;
+  margin: 10px;
+  height: 30px;
+  border-radius: 300px;
+  font-size: 15px;
+  border: transparent;
+  background-color: rgb(255 255 255 / 73%);
+  width: 100%;
 }
