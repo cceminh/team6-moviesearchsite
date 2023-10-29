@@ -11,21 +11,24 @@
 
   <body>
     <header class="header">
-      <h1>최고의 영화</h1>
+      <!-- <h1>최고의 영화</h1> -->
+      <img id="go_home_btn" class="logo_yellow" src="./asset/logo_yellow_4.png"/>
+      <form class="search_form" id="search_form">
+        <label></label>
+        <input
+          name="searchValue"
+          id="search_input"
+          type="text"
+          placeholder="Title"
+        />
+        <button type="submit" id="search-btn">Search</button>
+      </form>
+        <!---------------------------------영화뽑기------------------------------------>
+        <div class="randomPullBox">
+          <button id="randomBtn">Pull today's movie!</button>
+        <section id="randomP" class="randomP"></section>
+        </div>
     </header>
-    <form class="search_form" id="search_form">
-      <label>영화 검색: </label>
-      <input
-        name="searchValue"
-        id="search_input"
-        type="text"
-        placeholder="무얼 찾으시나요?"
-      />
-      <button type="submit" id="search-btn">검색</button>
-    </form>
-    <!---------------------------------영화뽑기------------------------------------ -->
-    <button id="randomBtn">추천영화뽑기</button>
-    <section id="randomP" class="randomP"></section>
     <!---------------------------------무비섹션------------------------------------ -->
     <div id="movie_section">
       <h1>Upcoming</h1>
