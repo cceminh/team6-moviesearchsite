@@ -19,10 +19,11 @@ export async function randomPost() {
 }
 
 export const randomBtn = document.getElementById("randomBtn");
+document.querySelector(".randomP").style.display = "none";
+console.log(document.querySelector(".randomP").style.display);
 
 function display() {
   randomPost();
-
   document.querySelector(".randomP").style.display === "none"
     ? (document.querySelector(".randomP").style.display = "block")
     : (document.querySelector(".randomP").style.display = "none");
