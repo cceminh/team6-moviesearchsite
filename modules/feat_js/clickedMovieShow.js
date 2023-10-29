@@ -1,12 +1,13 @@
-// TMDB Movies Detail API
-// https://developer.themoviedb.org/reference/movie-details
-import { fetchMovieData } from "../feat_js/movieShow.js";
-import { generateMovieCards } from "../feat_js/movieShow.js";
 
-// -------------- 기존 API 다시 불러오기 ---------------- //
+import { combinedApiArray } from "./combinedApi.js"; // 3개의 api를 담은 변수.
 
-export const generateMovieDetailCards = async (movie_list) => {
-  const movie_details = await fetchMovieData(movie_list);
+// api 3개 담은 배열을 만들어서 가져왔어요.
+// 그래서 async, fetch가 필요없어져서 지워버렸습니다. // 확인했습니다.
+
+/* 상세정보 영화카드 만들기 */
+
+export const generateMovieDetailCards = () => {
+  // 지운 부분//
   const detailCardList = document.querySelector("#detail_card_list");
   const url = window.location.href;
   // console.log(url);
@@ -14,7 +15,7 @@ export const generateMovieDetailCards = async (movie_list) => {
   const idOnAddress = searchParams.get("id");
   console.log("결과: " + idOnAddress); //  ${movie.id} 에 해당하는 number
 
-  const foundClickedMovie = movie_details.find(({ id }) => id == idOnAddress); 
+  const foundClickedMovie = combinedApiArray.find(({ id }) => id == idOnAddress); 
   console.log(foundClickedMovie); // 클릭된 영화묶음 객체
 
   const clickedMovieId = foundClickedMovie.id;

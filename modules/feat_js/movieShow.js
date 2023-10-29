@@ -32,6 +32,23 @@ export const searchResultCard = async (movie_list) => {
     .join("");
 };
 
+// import { combinedApiArray } from "./combinedApi.js";
+
+// export const searchResultCard = async () => {
+//   const movie = combinedApiArray;
+
+//   const cardLists = document.querySelector("#card");
+//   cardLists.innerHTML += movie
+//     .map(
+//       (movie) =>
+//         `<a id="a_movie_card" href="./movie_detail_page.html?id=${movie.id}"><div class="search_card" id=${movie.id}>
+//               <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
+//               <h3 id="title" class="search_title">${movie.title}</h3>
+//               </div></a>`
+//     )
+//     .join("");
+// };
+
 export async function fetchMovieData(movie_list) {
   const options = {
     method: "GET",
