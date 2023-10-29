@@ -10,7 +10,7 @@ export const generateMovieDetailCards = () => {
   // 지운 부분//
   const detailCardList = document.querySelector("#detail_card_list");
   const url = window.location.href;
-  // console.log(url);
+  console.log(url);
   const searchParams = new URL(url).searchParams;
   const idOnAddress = searchParams.get("id");
   console.log("결과: " + idOnAddress); //  ${movie.id} 에 해당하는 number
