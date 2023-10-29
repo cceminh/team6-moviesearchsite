@@ -170,6 +170,10 @@ body {
   height: 630px;
   justify-items: center;
 }
+
+#go_back_btn{
+  cursor: pointer;
+}
 .modal_close {
   cursor: pointer;
   margin: 10px;
