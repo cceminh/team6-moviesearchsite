@@ -12,7 +12,12 @@
   <body>
     <header class="header">
       <!-- <h1>최고의 영화</h1> -->
-      <img id="go_home_btn" class="logo_yellow" src="./asset/logo_yellow_4.png" alt="FINDMOVIE"/>
+      <img
+        id="go_home_btn"
+        class="logo_yellow"
+        src="./asset/logo_yellow_4.png"
+        alt="FINDMOVIE"
+      />
       <form class="search_form" id="search_form">
         <label></label>
         <input
@@ -23,11 +28,13 @@
         />
         <button type="submit" id="search-btn">Search</button>
       </form>
-        <!---------------------------------영화뽑기------------------------------------>
-        <div class="randomPullBox">
-          <button id="randomBtn">Pull today's movie!</button>
-        <section id="randomP" class="randomP"></section>
+      <!---------------------------------영화뽑기------------------------------------>
+      <div class="randomPullBox">
+        <button class="randomBtn" id="randomBtn">Pull today's movie!</button>
+        <div class="modal">
+          <div id="randomP" class="randomP"></div>
         </div>
+      </div>
     </header>
     <!---------------------------------무비섹션------------------------------------ -->
     <div id="movie_section">

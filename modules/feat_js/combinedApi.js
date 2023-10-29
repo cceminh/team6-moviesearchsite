@@ -12,3 +12,5 @@ export const combinedApiArray = [...a, ...b, ...c];
 export const unique = [
   ...new Map(combinedApiArray.map((m) => [m.id, m])).values(),
 ];
+
+console.log(unique);
