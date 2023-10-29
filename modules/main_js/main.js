@@ -1,6 +1,7 @@
 import { generateMovieCards } from "../feat_js/movieShow.js";
 import { handleSearch } from "../feat_js/search.js";
 import { randomPost } from "../feat_js/randomPost.js";
+// import { closeModal } from "../feat_js/modal.js";
 import { searchResultCard } from "../feat_js/movieShow.js";
 import { goHomeBtn } from "../feat_js/goHome.js";
 
@@ -32,8 +33,7 @@ searchForm.addEventListener("submit", (event) => {
   handleSearch(searchInput.value);
 });
 
-
 /* 홈으로 가기 */
-goHomeBtn.addEventListener('click', (event) => {
-  window.location.href = 'page.html';
+goHomeBtn.addEventListener("click", (event) => {
+  window.location.href = "page.html";
 });
