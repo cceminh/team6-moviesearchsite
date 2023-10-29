@@ -11,7 +11,7 @@ export const generateMovieCards = async (movie_list) => {
         `<a id="a_movie_card" href="./movie_detail_page.html?id=${movie.id}">
           <div class="movie_card" id=${movie.id}>
             <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
-            <h3 id="title" class="movie_title">${movie.title}</h3>
+            <div class="movie_title">${movie.title}</div>
          </div>
         </a>`
     )
