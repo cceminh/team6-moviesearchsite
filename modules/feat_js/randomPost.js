@@ -9,10 +9,6 @@ const render = (movie) => {
     </div>`;
   return temp_html;
 };
-// <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
-// id="a_movie_card" href="./movie_detail_page/?${movie.id}.html"
-//   <p id="overview">${movie.overview}</p>
-//   <p id="rating">평점:${movie.vote_average}</p>
 
 export async function randomPost() {
   let random = movie_arr[Math.floor(Math.random() * 60)];

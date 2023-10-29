@@ -1,0 +1,42 @@
+.topDetail {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* align-content: space-around; */
+
+}
+.seconDetail{
+    width: 800px;
+margin-left: 50px;
+flex-direction: column;
+
+}
+
+.topTitle {
+    font-size:4rem;
+}
+
+.topOver {
+    margin-top: 10%;
+ font-size: 2rem;
+ line-height : 3em;
+}
+
+.topDate {
+margin-top: 30px;
+font-size: 1.2rem;
+}
+
+.topRate {
+margin-top: 30px;
+font-size: 1.5rem;
+}
+
+body{
+    background-color: black;
+    color: aliceblue;
+}
+.arrow {
+    margin-right: 50px;
+ 
+}

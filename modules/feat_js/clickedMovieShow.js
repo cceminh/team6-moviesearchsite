@@ -9,7 +9,7 @@ export const generateMovieDetailCards = () => {
   // 지운 부분//
   const detailCardList = document.querySelector("#detail_card_list");
   const url = window.location.href;
-  // console.log(url);
+  console.log(url);
   const searchParams = new URL(url).searchParams;
   const idOnAddress = searchParams.get("id");
   console.log("결과: " + idOnAddress); //  ${movie.id} 에 해당하는 number
@@ -17,7 +17,7 @@ export const generateMovieDetailCards = () => {
   const foundClickedMovie = combinedApiArray.find(
     ({ id }) => id == idOnAddress
   );
-  console.log(foundClickedMovie); // 클릭된 영화묶음 객체
+  // console.log(foundClickedMovie); // 클릭된 영화묶음 객체
 
   const clickedMovieId = foundClickedMovie.id;
   const clikedPoster = foundClickedMovie.poster_path;
@@ -28,11 +28,13 @@ export const generateMovieDetailCards = () => {
 
   // console.log(clickedMovieId);
 
-  detailCardList.innerHTML = `<div id=${clickedMovieId}>
+  detailCardList.innerHTML = `<div class="topDetail" id=${clickedMovieId}>
               <img src="https://image.tmdb.org/t/p/w500${clikedPoster}"/>
-              <h3>${clickedTitle}</h3>
-              <p>Overview : ${clickedOverview}</p>
-              <p>Reaslse Date : ${clickedReleaseDate}</p>
-              <p>Rating : ${clickedReview}</p>
-            </div>`;
+            <div id="seconDetail" class="seconDetail">  
+              <p class="topTitle">${clickedTitle}</p>
+              <p class="topDate">Reaslse Date : ${clickedReleaseDate}</p>
+              <p class="topRate">Rating : ${clickedReview}</p>
+              <p class="topOver">Overview : ${clickedOverview}</p>
+              </div>
+              </div>`;
 };
