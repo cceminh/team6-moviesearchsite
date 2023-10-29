@@ -9,9 +9,7 @@ generateMovieCards("upcoming");
 generateMovieCards("top_rated");
 generateMovieCards("popular");
 
-searchResultCard("top_rated");
-searchResultCard("popular");
-searchResultCard("upcoming");
+searchResultCard();
 
 // searchResultCard();
 

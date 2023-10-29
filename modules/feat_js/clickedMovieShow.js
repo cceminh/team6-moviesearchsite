@@ -1,4 +1,3 @@
-
 import { combinedApiArray } from "./combinedApi.js"; // 3개의 api를 담은 변수.
 
 // api 3개 담은 배열을 만들어서 가져왔어요.
@@ -15,7 +14,9 @@ export const generateMovieDetailCards = () => {
   const idOnAddress = searchParams.get("id");
   console.log("결과: " + idOnAddress); //  ${movie.id} 에 해당하는 number
 
-  const foundClickedMovie = combinedApiArray.find(({ id }) => id == idOnAddress); 
+  const foundClickedMovie = combinedApiArray.find(
+    ({ id }) => id == idOnAddress
+  );
   console.log(foundClickedMovie); // 클릭된 영화묶음 객체
 
   const clickedMovieId = foundClickedMovie.id;

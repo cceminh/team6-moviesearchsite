@@ -1,3 +1,4 @@
+import { unique } from "./combinedApi.js";
 export const movie_arr = [];
 
 export const generateMovieCards = async (movie_list) => {
@@ -17,11 +18,9 @@ export const generateMovieCards = async (movie_list) => {
     .join("");
 };
 
-export const searchResultCard = async (movie_list) => {
-  const movie = await fetchMovieData(movie_list);
-
+export const searchResultCard = () => {
   const cardLists = document.querySelector("#card");
-  cardLists.innerHTML += movie
+  cardLists.innerHTML += unique
     .map(
       (movie) =>
         `<a id="a_movie_card" href="./movie_detail_page.html?id=${movie.id}"><div class="search_card" id=${movie.id}>
