@@ -1,10 +1,10 @@
 import { movie_arr } from "./movieShow.js";
 
 const render = (movie) => {
-  const temp_html = `<div class="random_detail"><div><h1 class="random_text" >오늘 이 영화는 어떠세요?</h1></div>
+  const temp_html = `<div class="random_detail"><div><h1 class="random_text" >A movie for you!</h1></div>
     <div class="movie_card3" id=${movie.id}><a id="a_movie_card3" href="./movie_detail_page.html?id=${movie.id}">
     <img class="movie_img" src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}"></a>
-    <button id="modal_close" class="modal_close">닫기</button>
+    <button id="modal_close" class="modal_close">Close</button>
     </div>
     </div>`;
   return temp_html;
