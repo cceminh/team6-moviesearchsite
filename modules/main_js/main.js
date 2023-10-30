@@ -36,7 +36,7 @@ searchForm.addEventListener("submit", (event) => {
 
 /* 홈으로 가기 */
 goHomeBtn.addEventListener("click", (event) => {
-  window.location.href = "page.html";
+  window.location.href = "index.html";
 });
 
 /* 개발자 이름 나타나기 */
