@@ -9,8 +9,8 @@ initializeCommentSystem();
 
 /* 홈으로 가기 go*/
 goHomeBtn.addEventListener('click', (event) => {
-  window.location.href = 'page.html';
+  window.location.href = 'index.html';
 });
 goBackBtn.addEventListener('click', (event) => {
-  window.location.href = 'page.html';
+  window.location.href = 'index.html';
 });
