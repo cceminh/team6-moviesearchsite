@@ -30,11 +30,11 @@ export const generateMovieDetailCards = () => {
 
   detailCardList.innerHTML = `<div class="topDetail" id=${clickedMovieId}>
               <img src="https://image.tmdb.org/t/p/w500${clikedPoster}"/>
-            <div id="seconDetail" class="seconDetail">  
-              <p class="topTitle">${clickedTitle}</p>
-              <p class="topDate">Reaslse Date : ${clickedReleaseDate}</p>
-              <p class="topRate">Rating : ${clickedReview}</p>
-              <p class="topOver">Overview : ${clickedOverview}</p>
+              <div id="seconDetail" class="seconDetail">  
+                  <p class="topTitle">${clickedTitle}</p>
+                  <p class="topDate">Reaslse Date : ${clickedReleaseDate}</p>
+                  <p class="topRate">Rating : ${clickedReview}</p>
+                  <p class="topOver">Overview : ${clickedOverview}</p>
               </div>
-              </div>`;
+          </div>`;
 };

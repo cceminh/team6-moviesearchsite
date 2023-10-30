@@ -4,6 +4,7 @@ import { randomPost } from "../feat_js/randomPost.js";
 // import { closeModal } from "../feat_js/modal.js";
 import { searchResultCard } from "../feat_js/movieShow.js";
 import { goHomeBtn } from "../feat_js/goHome.js";
+import { developerLink, developerMouseEventHandler } from "../feat_js/developerListShow.js";
 
 /* 메인화면 api 영화카드 만들기*/
 generateMovieCards("upcoming");
@@ -37,3 +38,7 @@ searchForm.addEventListener("submit", (event) => {
 goHomeBtn.addEventListener("click", (event) => {
   window.location.href = "page.html";
 });
+
+/* 개발자 이름 나타나기 */
+developerLink.addEventListener("mouseenter", developerMouseEventHandler.Mouseenter );
+developerLink.addEventListener("mouseleave", developerMouseEventHandler.mouseleave );
