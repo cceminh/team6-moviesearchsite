@@ -1,3 +1,10 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+/* --------------- header ---------------- */
+
 .header {
   background-color: black;
   height: 150px;
@@ -51,10 +58,50 @@
   color: yellow;
 }
 
-body {
-  background-color: black;
+.randomPullBox {
+  width: 10rem;
+  height: 7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 15px;
+}
+
+.randomP {
+  display: none;
+  position: fixed;
+  right: 0%;
+  top: 0%;
+  left: 0%;
+  bottom: 0%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(45 45 41 / 52%);
+}
+
+#randomBtn {
+  height: 4rem;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  width: 6rem;
+}
+#randomBtn:hover {
+  transform: scale(1.06);
+  transition: 0.2s ease;
+}
+
+.random_text {
+  font-weight: 600;
+  font-size: 30px;
+  margin-bottom: 30px;
   color: white;
 }
+
+
+/* --------------- main ---------------- */
 
 #movie_section h1 {
   font-size: 30px;
@@ -99,53 +146,11 @@ body {
 
 #a_movie_card {
   text-decoration: none;
-  /* 일단 a 태그로 글자색 블루로 떠서 임시로 글자색 블랙으로 처리, 나중에 css로 처리 필요 */
   color: black;
 }
 
 #a_movie_card:hover img {
   transform: scale(1.1);
-}
-
-.randomPullBox {
-  width: 10rem;
-  height: 7rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-left: 15px;
-}
-
-.randomP {
-  display: none;
-  position: fixed;
-  right: 0%;
-  top: 0%;
-  left: 0%;
-  bottom: 0%;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(45 45 41 / 52%);
-}
-
-#randomBtn {
-  height: 4rem;
-  border-radius: 30px;
-  cursor: pointer;
-  background-color: transparent;
-  color: white;
-}
-#randomBtn:hover {
-  transform: scale(1.06);
-  transition: 0.2s ease;
-}
-
-.random_text {
-  font-weight: 600;
-  font-size: 30px;
-  margin-bottom: 30px;
-  color: white;
 }
 
 .random_detail {
@@ -183,14 +188,7 @@ body {
   justify-items: center;
 }
 
-#go_back_btn {
-  cursor: pointer;
-}
 
-#go_back_btn:hover {
-  transform: scale(1.08);
-  transition: 0.2s ease;
-}
 .modal_close {
   cursor: pointer;
   margin: 10px;
@@ -202,7 +200,7 @@ body {
   width: 100%;
 }
 
-/* 스크롤바 */
+/* --------------- 스크롤바 ---------------- */
 
 .cardlist,
 .search_list {
@@ -230,7 +228,11 @@ body {
 ::-webkit-scrollbar-track {
   background: black;} /* 스크롤바 뒷 배경 색상 */
 
-/* ----------- Footer ---------------- */
+
+
+
+/* --------------- Footer ---------------- */
+
 #main_footer {
   height: 13rem;
   background-color:rgb(0, 0, 0);
@@ -293,6 +295,4 @@ body {
   visibility: hidden;
 }
 
-.smooth_effect {
-  transition: 0.3s east-in;
-}
+

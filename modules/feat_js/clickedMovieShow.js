@@ -1,8 +1,5 @@
 import { combinedApiArray } from "./combinedApi.js"; // 3개의 api를 담은 변수.
 
-// api 3개 담은 배열을 만들어서 가져왔어요.
-// 그래서 async, fetch가 필요없어져서 지워버렸습니다. // 확인했습니다.
-
 /* 상세정보 영화카드 만들기 */
 
 export const generateMovieDetailCards = () => {
