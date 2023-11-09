@@ -29,7 +29,7 @@ export const generateMovieDetailCards = () => {
               <img src="https://image.tmdb.org/t/p/w500${clikedPoster}"/>
               <div id="seconDetail" class="seconDetail">  
                   <p class="topTitle">${clickedTitle}</p>
-                  <p class="topDate">Reaslse Date : ${clickedReleaseDate}</p>
+                  <p class="topDate">Release Date : ${clickedReleaseDate}</p>
                   <p class="topRate">Rating : ${clickedReview}</p>
                   <p class="topOver">Overview : ${clickedOverview}</p>
               </div>
